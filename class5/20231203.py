@@ -58,3 +58,48 @@
 #     ptr = ptr.next
 # # Connect previous node of delete node to next node of delete node.
 # ptr.next = ptr.next.next
+
+loginlabel= Label(root, text= 'Login Page')
+accountlabel = Label(root, text # 'Account')
+passwordlabel= Label(root,text = 'Password')
+resultlabel= Label(root, text .:)
+#根號密碼输入程與註冊按钮
+accountentry Entry(root)
+passwordentry = Entry(root,show="*)#密碼輸入為*
+signupbutton = Button(root,text ='Sign Up',width=10,command=lambda: addUser())
+loginlabel. pack(pady=5)
+account label. pack(pady=5)
+password label. pack(pady=5)
+resultlabeL. pack(pady=5)
+accountentry-pack(pady=5)
+passwordentry. pack(pady=5)
+signupbutton.pack(pady=5)
+def addUser(view,account)：
+    accountentry = Entry(root)
+    passwordentry= Entry(root,show="*")#密碼输入為*
+    signupbutton = Button(root,text = 'Sign Up',width =10,command=lambda: addUser(root,accountentry,passwordentry))
+#放置元素
+Loginlabel.pack(pady=5)
+account labe l. pack(pady=5)
+passwordlabel.pack(pady=5)
+resultlabel. pack(pady=5)
+accountentry, pack(pady=5)
+passwordentry.pack(pady=5)
+signupbutton.pack(pady=5)
+
+def addUser(giew, accountentry, passwordentry):
+    print(accountentry.get(),passwordentry.get())
+    print("Sign Up...")
+#取得咕就密研並存成参教
+account # accountentry.get()
+password = passwordentry.get()
+    try:
+        auth.create_user_with_email_and_password(account,password)
+      print("Successfully signup!")
+    resultlabel.config(text"Successfully signup!")
+except Exception as e:
+print(f"Create Account Failed...: (e)")
+resultlabel["text"] = "Create Account Failed..."
+
+
+
