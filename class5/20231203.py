@@ -113,3 +113,18 @@ def addUser(view, accountentry, passwordentry):
 # resultLabel. config(text = "Email account has already exist!") # reset label for fail to signup.
         print (f"創建使用者失敗:{e}")# reset label for fail to signup.
         resultLabel["text"] = "Email account has already exist!"
+
+def verifyUser(view, accountentry, passwordentry) :
+    print(accountentry.get(),passwordentry.get())
+    print("Log in...")
+# Assign user's entry to parameter account and parameter password.
+    account = accountentry.get()
+    password = passwordentry.get()
+    try:
+        user = auth.sign_in_with_email_and_password(account, password)
+        print("Successfully log in!")
+        resultLabel.config(text = "Successfully log in!")
+    except Exception as e:
+        print (f"Logged in failed: {e}")
+        resultLabel["text"] = "Logged in failed..."
+root.mainloop()
