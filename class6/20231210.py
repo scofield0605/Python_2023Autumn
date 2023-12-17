@@ -1,4 +1,4 @@
-import pyrebase
+# import pyrebase
 from tkinter import *
 
 config = {
