@@ -16,4 +16,4 @@ def traverse(head):
             break
         ptr = ptr.next
     print("Finish traverse!")
-traverse (head)
+traverse (head) 
