@@ -1,5 +1,4 @@
 import firebase_admin
-import 
 import os
 from firebase_admin import credentials, storage
 cred = credentials.Certificate("/Users/scofield/Desktop/2023_autumn/Python_2023Autumn/firebase_token.json")
